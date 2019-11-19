@@ -1,14 +1,11 @@
 
-# Fast and Accurate Image Super Resolution by Deep CNN with Skip Connection and Network in Network
+# Semiconductor Process Wafer Topographical Map Interpolation
 
-by [Jin Yamanaka](https://github.com/jiny2001), Shigesumi Kuwashima and [Takio Kurita](http://home.hiroshima-u.ac.jp/tkurita/profile-e.html)
+by Luis Castaneda
 
+## Abstract
 
-## Overview (Ver 2.)
-
-This is a tensorflow implementation of ["Fast and Accurate Image Super Resolution by Deep CNN with Skip Connection and Network in Network"](https://arxiv.org/abs/1707.05425), a deep learning based Single-Image Super-Resolution (SISR) model. We named it **DCSCN**. If you are checking the paper's code and results, please check [ver1 branch](https://github.com/jiny2001/dcscn-super-resolution/tree/ver1).
-
-The model structure is like below. We use Deep CNN with Residual Net, Skip Connection and Network in Network. A combination of Deep CNNs and Skip connection layers is used as a feature extractor for image features on both local and global area. Parallelized 1x1 CNNs, like the one called Network in Network, is also used for image reconstruction.
+In this project I propose a novel usage of deep convolutional generative adversarial networks to take sparse topographical data sets and interpolate them. I will be using techniques from established “Inpainting” DCGAN algorithms to fill in regions of missing data, as well as enhancing the results with Single Image Super Resolution (SISR) algorithms. These “images” will actually be maps where the z coordinate of the maps are treated as pixel intensity. In applying these methods, it is the goal to produce useful maps which can be used for wafer inspections, in a reduced amount of time by reducing the physical data collection and applying deep-learning based interpolation techniques.  
 
 <img src="https://raw.githubusercontent.com/jiny2001/dcscn-super-resolution/master/documents/figure1_v2.png" width="800">
 
