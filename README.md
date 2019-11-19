@@ -8,8 +8,8 @@ by Luis Castaneda
 In this project I propose a novel usage of deep convolutional generative adversarial networks to take sparse topographical data sets and interpolate them. I will be using techniques from established “Inpainting” DCGAN algorithms to fill in regions of missing data, as well as enhancing the results with Single Image Super Resolution (SISR) algorithms. These “images” will actually be maps where the z coordinate of the maps are treated as pixel intensity. In applying these methods, it is the goal to produce useful maps which can be used for wafer inspections, in a reduced amount of time by reducing the physical data collection and applying deep-learning based interpolation techniques.  
 # Dependencies
 * Python 3.6
-* Keras 2.2.4
-* Tensorflow 1.12
+* Keras
+* Tensorflow
 
 # How to use this repository
 
