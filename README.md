@@ -12,7 +12,6 @@ In this project I propose a novel usage of deep convolutional generative adversa
 * Tensorflow 1.12
 
 # How to use this repository
-The easiest way to try a few predictions with this algorithm is to go to [www.fixmyphoto.ai](https://www.fixmyphoto.ai/), where I've deployed it on a serverless React application with AWS lambda functions handling inference.
 
 If you want to dig into the code, the primary implementations of the new `PConv2D` keras layer as well as the `UNet`-like architecture using these partial convolutional layers can be found in `libs/pconv_layer.py` and `libs/pconv_model.py`, respectively - this is where the bulk of the implementation can be found. Beyond this I've set up four jupyter notebooks, which details the several steps I went through while implementing the network, namely:
 
