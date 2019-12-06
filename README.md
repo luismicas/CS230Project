@@ -20,7 +20,7 @@ Step 1: WaferIntaint-PConv-Keras.7z
 Setp 2: WaferUpscale-dcscn-super-resolution.7z
 
 
-# =====
+# ===
 
 Step 1: WaferIntaint-PConv
 ## Pre-trained weights
@@ -41,6 +41,6 @@ python main.py \
 TBD
 
 
-# =====
+# ===
 Step 2: WaferUpscale
 
