@@ -20,7 +20,7 @@ Step 1: WaferIntaint-PConv-Keras.7z
 Setp 2: WaferUpscale-dcscn-super-resolution.7z
 
 
-# ===
+# ========================================================================================================================
 
 Step 1: WaferIntaint-PConv
 ## Pre-trained weights
@@ -41,6 +41,21 @@ python main.py \
 TBD
 
 
-# ===
+# ========================================================================================================================
 Step 2: WaferUpscale
+## Pre-trained weights
+* [Ported VGG 16 weights](https://drive.google.com/open?id=1HOzmKQFljTdKWftEP-kWD7p2paEaeHM0)
+* Please email luismicas@standford.edu for weight specificly trainned on customer wafer data sets.
 
+## Training on your own dataset
+```
+python main.py \
+    --name MyDataset \
+    --train TRAINING_PATH \
+    --validation VALIDATION_PATH \
+    --test TEST_PATH \
+    --vgg_path './data/logs/pytorch_to_keras_vgg16.h5'
+```
+
+## Sample result
+TBD
