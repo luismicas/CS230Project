@@ -58,12 +58,8 @@ python main.py \
 
 ## Training on your own dataset
 ```
-python main.py \
-    --name MyDataset \
-    --train TRAINING_PATH \
-    --validation VALIDATION_PATH \
-    --test TEST_PATH \
-    --vgg_path './data/logs/pytorch_to_keras_vgg16.h5'
+# apply super resolution with small model
+python sr.py --file=your_file.png --layers=8 --filters=96
 ```
 
 ## Sample result
