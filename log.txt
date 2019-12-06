@@ -1,5 +1,0 @@
-From C:\Users\lcastane\Documents\GitHub\CS230Project\helper\utilty.py:107: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
-
-
-DCSCN v2-------------------------------------
-2019/11/12 14:39:47 [dcscn_L12_F196to48_Sc3_NIN_A64_PS_R1F32]
