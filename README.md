@@ -16,8 +16,8 @@ In this project I propose a novel usage of deep convolutional generative adversa
 
 Please download and unzip the 
 
-Step 1: WaferIntaint-PConv-Keras.7z
-Setp 2: WaferUpscale-dcscn-super-resolution.7z
+    Step 1: WaferIntaint-PConv-Keras
+    Setp 2: WaferUpscale-dcscn-super-resolution
 
 
 # ==============================
