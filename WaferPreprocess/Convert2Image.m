@@ -24,7 +24,7 @@ if isempty(varargin)
     startPath = ('\\10.35.1.204\e$\DATA1010\KTInsptr1340013\Logs\10.10.928.2\DiagOutput\FM'); %Identify start location... may need to
     
     if B37R
-        startPath = ('C:\Users\lcastane\Desktop\CS230\Project\FM Maps\B37R\PA148');
+        startPath = ('C:\Users\lcastane\Desktop\CS230\Project\FocusMapDataBase\FullWaferSP');
     end
     
     [filename, path] = uigetfile({'*FM*.fmi;*.zip','All Files (*.*)'},'Please select a focus map to analyze, or Zipped Session',startPath); % Select folder GUI with starting folder location
@@ -103,23 +103,68 @@ maskIndex    = randi(100,size(imgZ_0, 1),size(imgZ_0, 2));
 mask = maskIndex >= sparsity; % Percentage of points removed
 imgZ_0 = imgZ_0.*uint8(mask);
 
+clearvars -except path files imgZ_0 pix targetFile
+
+% Create the rotated images
 imgZ_0 = imresize(imgZ_0,[pix pix]); 
+imgZ_90 = imrotate(imgZ_0,90);
+imgZ_180 = imrotate(imgZ_0,180);
+imgZ_270 = imrotate(imgZ_0,270);
+
+% Create mirrored images
+imgZ_0_m = flip(imgZ_0,2); 
+imgZ_90_m = imrotate(imgZ_0_m,90);
+imgZ_180_m = imrotate(imgZ_0_m,180);
+imgZ_270_m = imrotate(imgZ_0_m,270);
+
+% Generate blurred images
+blur = 4; % Larger values create more blur (blur by blur convolved)
+
+imgZ_0_b        = uint8(conv2(imgZ_0,ones(blur)/blur^2,'same'));
+imgZ_90_b       = uint8(conv2(imgZ_90,ones(blur)/blur^2,'same'));
+imgZ_180_b      = uint8(conv2(imgZ_180,ones(blur)/blur^2,'same'));
+imgZ_270_b      = uint8(conv2(imgZ_270,ones(blur)/blur^2,'same'));
+
+imgZ_0_m_b      = uint8(conv2(imgZ_0_m,ones(blur)/blur^2,'same')); 
+imgZ_90_m_b     = uint8(conv2(imgZ_90_m,ones(blur)/blur^2,'same'));
+imgZ_180_m_b    = uint8(conv2(imgZ_180_m,ones(blur)/blur^2,'same'));
+imgZ_270_m_b    = uint8(conv2(imgZ_270_m,ones(blur)/blur^2,'same'));
 
 % Generate some similar images for data agumentaion
-imgZ_1 = flip(imgZ_0,2);
-imgZ_2 = flip(imgZ_0,1);
-imgZ_3 = flip(imgZ_2,2);
-
 imageName = strcat(targetFile(1:end-4),'_0.png');
 imwrite(imgZ_0,imageName)
 imageName = strcat(targetFile(1:end-4),'_1.png');
-imwrite(imgZ_1,imageName)
+imwrite(imgZ_90,imageName)
 imageName = strcat(targetFile(1:end-4),'_2.png');
-imwrite(imgZ_2,imageName)
+imwrite(imgZ_180,imageName)
 imageName = strcat(targetFile(1:end-4),'_3.png');
-imwrite(imgZ_3,imageName)
+imwrite(imgZ_270,imageName)
 
-% Randomly sparsely remove data points
+imageName = strcat(targetFile(1:end-4),'_4.png');
+imwrite(imgZ_0_m,imageName)
+imageName = strcat(targetFile(1:end-4),'_5.png');
+imwrite(imgZ_90_m,imageName)
+imageName = strcat(targetFile(1:end-4),'_6.png');
+imwrite(imgZ_180_m,imageName)
+imageName = strcat(targetFile(1:end-4),'_7.png');
+imwrite(imgZ_180_m,imageName)
 
+imageName = strcat(targetFile(1:end-4),'_8.png');
+imwrite(imgZ_0_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_9.png');
+imwrite(imgZ_90_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_10.png');
+imwrite(imgZ_180_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_11.png');
+imwrite(imgZ_270_b,imageName)
+
+imageName = strcat(targetFile(1:end-4),'_12.png');
+imwrite(imgZ_0_m_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_13.png');
+imwrite(imgZ_90_m_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_14.png');
+imwrite(imgZ_180_m_b,imageName)
+imageName = strcat(targetFile(1:end-4),'_15.png');
+imwrite(imgZ_270_m_b,imageName)
 
 disp('Done with file!!') 
