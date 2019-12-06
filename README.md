@@ -38,15 +38,15 @@ python main.py \
 ```
 
 ## Sample result
-https://github.com/luismicas/CS230Project/blob/master/images/Results.png
+![Results](https://github.com/luismicas/CS230Project/blob/master/images/Results.png)
 
-https://github.com/luismicas/CS230Project/blob/master/images/ResidualsPlot.png
+![Residual Error](https://github.com/luismicas/CS230Project/blob/master/images/ResidualsPlot.png)
 
 
 # ==============================
 Step 2: WaferUpscale
 
-https://github.com/luismicas/CS230Project/blob/master/images/CNN.png
+![CNN with Bicubic Skip Connection](https://github.com/luismicas/CS230Project/blob/master/images/CNN.png)
 
 ## Pre-trained weights
 * [Ported VGG 16 weights](https://drive.google.com/open?id=1HOzmKQFljTdKWftEP-kWD7p2paEaeHM0)
