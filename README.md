@@ -15,10 +15,13 @@ In this project I propose a novel usage of deep convolutional generative adversa
 # How to use this repository
 
 Please download and unzip the 
-
+    Step 0: WaferPreprocess.zip 
     Step 1: WaferIntaint-PConv-Keras
     Setp 2: WaferUpscale-dcscn-super-resolution
 
+# ==============================
+
+## Step 0: Use Matlab to Pre-process Wafer Map FMI Files
 
 # ==============================
 
