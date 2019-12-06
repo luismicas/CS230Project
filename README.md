@@ -22,7 +22,10 @@ Setp 2: WaferUpscale-dcscn-super-resolution.7z
 
 # ==============================
 
-Step 1: WaferIntaint-PConv
+## Step 1: WaferIntaint-PConv
+
+![UNet with Partial Convolutions](https://github.com/luismicas/CS230Project/blob/master/images/UNet.png)
+
 ## Pre-trained weights
 * [Ported VGG 16 weights](https://drive.google.com/open?id=1HOzmKQFljTdKWftEP-kWD7p2paEaeHM0)
 * Please email luismicas@standford.edu for weight specificly trainned on customer wafer data sets.
@@ -38,13 +41,11 @@ python main.py \
 ```
 
 ## Sample result
-![Results](https://github.com/luismicas/CS230Project/blob/master/images/Results.png)
 
 ![Residual Error](https://github.com/luismicas/CS230Project/blob/master/images/ResidualsPlot.png)
 
-
 # ==============================
-Step 2: WaferUpscale
+## Step 2: WaferUpscale
 
 ![CNN with Bicubic Skip Connection](https://github.com/luismicas/CS230Project/blob/master/images/CNN.png)
 
@@ -63,4 +64,4 @@ python main.py \
 ```
 
 ## Sample result
-TBD
+![Results](https://github.com/luismicas/CS230Project/blob/master/images/Results.png)
